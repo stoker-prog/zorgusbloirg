@@ -1,0 +1,45 @@
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      #00ff4c 0px,
+      #00ff4c 20px,
+      #ff00ff 20px,
+      #ff00ff 40px
+    );
+}
+
+h1, h2 {
+  text-shadow:
+    3px 3px 0 #ff0000,
+    -3px -3px 0 #00ffff,
+    0 0 20px #ffff00;
+}
+
+section {
+  background: var(--card-bg);
+  border: 4px dashed var(--border);
+  box-shadow:
+    0 0 30px #ff00ff,
+    0 0 60px #00ffff;
+}
+
+.hero-img {
+  border: 8px dotted #ff0000;
+  filter:
+    hue-rotate(180deg)
+    saturate(400%)
+    contrast(200%);
+}
+
+.tagline,
+footer,
+em {
+  color: #ffff00;
+}

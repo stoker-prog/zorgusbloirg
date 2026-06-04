@@ -1,60 +1,65 @@
-body {
-  background: #18132b;
-  color: #d8ffd0;
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
+/* Your Original Styles */
+    body {
+      background: #18132b;
+      color: #d8ffd0;
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
 
-h1, h2 {
-  color: #5effc5;
-}
+    h1, h2 {
+      color: #5effc5;
+    }
 
-section {
-  background: #2a2347;
-  border: 1px solid #72ff95;
-  padding: 15px;
-  margin: 15px 0;
-}
+    section {
+      background: #2a2347;
+      border: 1px solid #72ff95;
+      padding: 15px;
+      margin: 15px 0;
+    }
 
-img {
-  width: 100%;
-  max-width: 600px;
-}
+    img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
 
-footer {
-  color: #9c8fff;
-}
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 30px 0;
-  flex-wrap: wrap;
-}
+    footer {
+      color: #9c8fff;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
 
-.alien-btn {
-  background-color: #4a7c59; /* Earthy Sporg Green */
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 50px;
-  font-family: 'Pacifico', cursive;
-  font-size: 1.1rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  border: 2px solid transparent;
-}
+    /* --- New Alien Button Styles --- */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
 
-.alien-btn:hover {
-  background-color: #8fbc8f;
-  transform: scale(1.1) rotate(-2deg);
-  border: 2px solid #fff;
-  cursor: pointer;
-}
+    .alien-btn {
+      background: #72ff95;
+      color: #18132b;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out;
+      border: 2px solid transparent;
+    }
 
-/* For that extra "Xorg" touch */
-.alien-btn:active {
-  transform: scale(0.9);
-  filter: hue-rotate(90deg);
-}
+    .alien-btn:hover {
+      background: #18132b;
+      color: #72ff95;
+      border: 2px solid #72ff95;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #72ff95;
+    }
+
+    .alien-btn:active {
+      filter: hue-rotate(90deg);
+    }

@@ -51,15 +51,3 @@
       transition: all 0.2s ease-in-out;
       border: 2px solid transparent;
     }
-
-    .alien-btn:hover {
-      background: #18132b;
-      color: #72ff95;
-      border: 2px solid #72ff95;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #72ff95;
-    }
-
-    .alien-btn:active {
-      filter: hue-rotate(90deg);
-    }

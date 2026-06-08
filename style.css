@@ -1,53 +1,189 @@
-/* Your Original Styles */
-    body {
-      background: #18132b;
-      color: #d8ffd0;
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    h1, h2 {
-      color: #5effc5;
-    }
+:root {
+  --bg:         #0f0c1e;
+  --bg-card:    #1a1535;
+  --bg-card2:   #211d3a;
+  --green:      #5effc5;
+  --green-dim:  #2dcc8f;
+  --purple:     #9c8fff;
+  --purple-dim: #6a5fcf;
+  --text:       #d8ffd0;
+  --text-dim:   #9bbfa8;
+  --border:     #72ff9540;
+}
 
-    section {
-      background: #2a2347;
-      border: 1px solid #72ff95;
-      padding: 15px;
-      margin: 15px 0;
-    }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, serif;
+  line-height: 1.7;
+}
 
-    img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 8px;
-    }
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
 
-    footer {
-      color: #9c8fff;
-      margin-top: 30px;
-      font-size: 0.9rem;
-      text-align: center;
-    }
+/* NAV */
+nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
 
-    /* --- New Alien Button Styles --- */
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
+nav a {
+  background: var(--green);
+  color: var(--bg);
+  padding: 6px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  transition: background 0.18s, color 0.18s;
+}
 
-    .alien-btn {
-      background: #72ff95;
-      color: #18132b;
-      padding: 12px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: all 0.2s ease-in-out;
-      border: 2px solid transparent;
-    }
+nav a:hover {
+  background: var(--purple);
+  color: #fff;
+}
+
+nav a.active {
+  background: var(--purple-dim);
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  margin-bottom: 32px;
+}
+
+header h1 {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* HERO IMAGE */
+.hero-img {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+  margin-bottom: 28px;
+}
+
+.hero-img.tinted {
+  filter: hue-rotate(200deg) saturate(0.7);
+}
+
+/* SECTIONS */
+section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+
+section p {
+  font-size: 0.97rem;
+  margin-bottom: 10px;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+em {
+  color: var(--green-dim);
+  font-style: italic;
+}
+
+/* BUTTON GRID SECTION */
+.button-grid {
+  background: var(--bg-card2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.alien-btn {
+  background: transparent;
+  padding: 10px 18px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+/* LORE BLOCK */
+.lore {
+  border-left: 3px solid var(--purple-dim);
+  padding-left: 18px;
+  font-style: italic;
+  color: var(--text-dim);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* PAGE: HOME — green accents */
+.page-home header h1   { color: var(--green); }
+.page-home .tagline    { color: var(--purple); }
+.page-home section h2  { color: var(--green); }
+.page-home footer      { color: var(--purple); }
+.page-home .alien-btn  {
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+.page-home .alien-btn:hover {
+  background: var(--green);
+  color: var(--bg);
+}
+
+/* PAGE: SPORG'XA — purple accents */
+.page-xa header h1    { color: var(--purple); }
+.page-xa .tagline     { color: var(--green); }
+.page-xa section      { border-color: #9c8fff30; }
+.page-xa section h2   { color: var(--purple); }
+.page-xa footer       { color: var(--green-dim); }
+.page-xa .alien-btn   {
+  color: var(--purple);
+  border: 1px solid var(--purple);
+}
+.page-xa .alien-btn:hover {
+  background: var(--purple);
+  color: #fff;
+}
